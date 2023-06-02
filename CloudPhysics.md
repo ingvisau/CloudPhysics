@@ -304,7 +304,7 @@ $s-s_K=\frac{e_\infty - e_{eq}}{e_s(T_\infty)}$
 2) Surface processes: Removal of vapor by condensation, Gradients in capor, Latent heat release and warming adjacent to particle, Gradients in temperature.
 3) Energy transport, Transport of heat away from the particle.
 
-#### STEP 1. -- Mass transport onto the particle 
+### STEP 1. -- Mass transport onto the particle 
 
 $I_v-$ Total flow of vapor toward the particle (mol/s).
 
@@ -357,6 +357,208 @@ $$
 :::
 
 :exclamation: See lecture 13 for refinements of the theory
+
+### Limitations of Maxwell's theory
+
+#### Ventilation effects
+
+#### Surface effects 
+Mass and energy is not transferred between the phases with 100% efficiency. Despite knowlegde gaps in the how these mechanisms works we still need to take them into account. **The mass accomodation coefficent** $\alpha_m$ is used to represent the actuall fraction of impinging water molecules that acually becomes a part of the droplet. **The termal accommodation coefficent** ($\alpha_T$) represent the efficiency of the air molecules to extract the excess heat from the droplet. 
+* Best esitmaes $\alpha_m$ = 0.06,  $\alpha_T$ = 0.7 
+
+Maxwell's theory also assume that equilibrium extends all the way to the surface of the droplet, however the droplet grows only if $e < e_{eq}$, therefore if taken literally, Maxwell's theory does not permit growth or evaporation to occur. The free molecular region starting at a small distance $\Delta$ from the surface. Going from the continuum region to the free molecular region there is a jump in the vapor concentration n. This jump is largest for the small droplets. The vapor jump is the small diviation from equilibrium required for droplet growth to occur. 
+![vapor_jump](https://hackmd.io/_uploads/ByGzbFNLh.png)
+ 
+### Vapor growth of ice crystals
+The fundemental distinction between the growth of cloud droplets and ice crystals, is the complex shapes of ice crystals. How to best adjusting the growth laws to account for the complex shapes is still debated. 
+
+The most convinent and general approach uses a analogy from electrostatics replacing the radius by the particle capacitance C. This give the follwing compact form for the growth of the ice crystal: 
+
+$$\frac{dm_p}{dt} = 4\pi C\rho_I G'_I s_i
+$$
+
+The capacitance represent both the same and size of the particle. The vapor concentration is treated analogous to the electric field. Such as the equation above allow us treat the particle as a point sink of vapor with considering the complex geometrical shapes. 
+
+#### Habit formation
+
+The deposition coeffienct varies a function of temperature for the prism and basal face of the growing ice crystals. This creates prefriential ice crystals shapes at different temperatures. If the enviromental condition changes as the ice crystal grows that would also change the deposition coefficient and thus alter the preferential growth face. Which means the ice crystal can have secondary habits different from the primary habits. The growth ratio of the different faces is described by the follwing equation:
+
+$$
+\frac{R_B}{R_P} = \frac{\alpha_B(S_B)S_B}{\alpha_R(S_R)S_R}
+$$
+Where $S_B$ and $S_R$ is the supersaturation with respect to the basal and prism faces. 
+## Growth by collection
+
+
+* **Collision-coalescence:**
+Both particles liquid. The larger "collector" drop collects one or more smaller drops, because of the difference in fallspeeds. Basic mechanism of rain development in warm clouds. The collision coalescence explains why it can start to rain after only 20-30 minutes since the cloud first appeared, despite the decreasing rate of condensational growth for larger droplets. It starts when some droplets in the clouds excced about 15 $\mu m$. 
+
+* **Riming:**
+Ice crystal colliding with supercooled cloud droplets, which freeze on impact. Heavy riming lead to graupel and hail (if the conditions are appropriate). Riming can also occur in stratoform cloud if the ambient supersaturation is above that of liquid such that the WBF process does not consume the supercooled droplets.  
+
+* **Capture nucleation:**
+Large supercooled drop capture a small ice crystal, and freezes.
+
+* **Aggregation:**
+Ice crystals colliding and sticking together. Most effective at higher temperature close to 0 K, e.g big snowflakes.  
+
+--> In every case, the outcome of collisions depends on the relative motions of the particles involved.
+
+#### Not all cloud drops coalesce!
+When two droplets collide we have three possibilities:
+1.  Collected droplets merges with collector drop
+2. Temporarily coalesce and then seperate retaining their original entities 
+3. Coalecenes but then the droplets break into many smaller droplets. 
+
+
+#### Particle fallspeed
+
+*Terminal fallspeed* $v_p$ : Gravitational and drag forces balance, maximum downward speed. A measure of motion relative to the air in which it resides.
+
+* As the particle gains speed, it pushes air out of the way and so experiences air resistance, expressed as the drag force $F_D=F_D(v'_p)$, which increases with the instantaneous (time-dependent) speed $v'_p$ of the particle relative to the air
+* We neglect accelleration time, and assume that cloud particles always fall at their terminal speeds.
+* NB: terminal fallspeed is relative to air, and must not be confused with the particle's ascent rate $dz_p/dt=w-v_p$, which is the rate of motion relative to the Earth when the air is rising with speed $w$.
+
+:::info
+*How can we determine $v_p$?*
+
+Pressure at stagnation point: $p_{stag}=p_{atm}+p_{dyn}$, where $p_{atm}$ is the ambient pressure at this altitude, and $p_{dyn}$ is the dynamic pressure; the additional pressure that arises from the relative motion of the particle.
+Pressure as an energy density [Jm⁻³]: $p_{dyn}=\frac{1}{2}\rho_{air}v²_p$  
+--> change of kinetic energy of the air from its value at the stagnation point relative to that in the free stream. 
+
+:arrow_down: 
+
+$F_D(v_p)=p_{dyn}A_cC_D=\frac{1}{2}\rho_{air}v_p²A_cC_D$
+
+$A_c-$ drop cross section  
+$C_D-$ drag coefficient  
+
+:arrow_down:
+
+$v_p=(\frac{2g\rho_pV_p}{C_D\rho_{air}A_c})^\frac{1}{2}$  
+
+:arrow_down: 
+
+$v_p \propto \frac{\rho_pVp}{C_DA_c}$  
+
+--> Fallspeed ultimately depends on the ratio of particle mass to the effectice cross-sectional area.
+:::
+
+Around spherical particles, the flow around is characterized rather well by the dimensionless Reynolds number, the ratio of the inertial and viscous forces:
+
+$N_{Re}=D-pv_p/\nu_{air}$, where $\nu_{air}=\mu_{air}/\rho_{air}$ is the kinematic viscosity of air having dynamic viscosity $\mu_{air}$.
+The drag force can be expressed with $N_{Re}$.
+
+The drag coefficient $C_D$ and the Reynolds number $N_{Re}$ vary greatly with particle size and the type of flow around the particle. To handle this complexity, we divide into several regimes:
+
+![](https://hackmd.io/_uploads/rya-4wQ8n.png)
+
+#### Free-molecular regime ($D_p << \lambda_{air} \approx 0.1 \mu m$)
+Air must be treated as a collection of molecules, not as a continuum. Drag force dominated by collisions.  
+$v_{p,FM} \propto D_p$
+
+#### Transition regime ($D_p \approx \lambda_{air}$)
+Complicated physics -- molecular interactions are difficult to calculate, and continuum assumptions are not valid, empirical correction to Stokes drag.
+
+## Evolution of supersaturation
+
+Upward motion of air parcel --> lower p and $\rho$ --> work on environment --> cooling of air parcel --> reduced equilibrium vapor pressure --> RH increase.
+
+Above cloud base: RH=100%. Excess water vapor depleted by condensation.
+
+* From Ch. 6: *Adiabatic supersaturation development equation*:
+$$\frac{ds}{dt}=Q_1w-Q_2\frac{dy_L}{dt}
+$$
+    * $Q_1=\frac{e}{e_s}(\frac{l_v}{c_pT}-1)\frac{M_{air}g}{RT}$  
+    * $Q_2=\frac{e}{e_s}\frac{l_v²}{c_pRT²}+\frac{p}{e_s}$  
+
+
+Now want to introduce the effects of aerosols.
+* Express ds/dt in terms of $\omega_L=LWC, (g/m³_{air}$):
+$$ \frac{ds}{dt}=Q_1w-Q_2\frac{d\omega_L}{dt},
+$$
+    * $Q_2=\frac{l_v²}{M_wpc_pT}+\frac{RT}{(M_we_s(T))}$  
+    ($\frac{e}{e_s}\approx1$)  
+    --> Must be solved numerically to gain the evolution of supersaturation, $s(t)$!
+    
+
+**General behaviour of the equation:**
+![](https://hackmd.io/_uploads/By8MJ1rL3.png)
+
+* Linear increase of $s$ beyond 0. Activation of CCN -> cloud drops form and start growing from condensation.
+* $s$ reaches a peak value $s_{max}$, depletion becomes larger than production. $s$ stays above 0.
+* A quasi-stationary value of $s$, $s_{qs}$, is reached as sources and sinks balance.
+
+**Mathematical solution of $\frac{ds}{dt}$; Extended theory:**  
+We need to know how $\frac{d\omega_L}{dt}$ changes with time. Two steps: (1) Actvation of CCN and (2) Growth by diffusion.  
+(1) Number of cloud drops activated for a change in s from s to s+ds:
+$$\frac{dN_d}{ds}=n_{CCN}(s)
+$$
+$n_{CCN}(s)-$ supersaturation spectrum of CCN, the number of particles that activate in the supersaturation range s to s+ds.  
+Accumulated drops is then given by:
+$$\int_0^{N_d}dN_d=\int_0^{s(t)}n_{CCN}(s_c)ds_c
+$$
+where $s_c$ is the critical supersaturation for a particle (Köhler theory).  
+New droplets are added to the population only as long as s increases with time and viable CCN remain available in the parcel.  
+
+(2) Activated drops will increase their mass by condensation. Conservation of mass means:  
+$\frac{d\omega_V}{dt}=-\frac{d\omega_L}{dt}.$  
+The change in mass per volume when drops in the interval $dN_d$ are growing by condensation:  
+$\frac{dm_d}{dt}\cdot dN_d$  
+The total change in LWC ($\omega_L$):
+$$\frac{d\omega_L}{dt}=\int_0^{N_d}\frac{dm_d}{dt}\cdot dN_d=\int_0^{s(t)}\frac{dm_d}{dt}\cdot n_{CCN}(s_c)\cdot ds_c
+$$
+Now we need an expression for $dm_d/dt$. See lecture notes. In the end, we can have an expression for the evolution of supersaturation that looks like this:
+$$\frac{ds}{dt}=Q_1w-A_2sI(s),
+$$
+where $A_2=2\pi Q_2\rho_L(2G)^{3/2}$ is a factor independent of s, and $I(s)$ is an integral that contains all the information about the formation of new droplets through activation.  
+
+Further calculations require:
+1) An assumed CCN spectrum, $n_{CCN}(s_C)$
+2) Knowledge of how the updraft speed $w$ varies with time.
+
+
+**Aerosol influence**  
+* Liquid water concentration ($\omega_L$) builds up at a wrate roughly proportional to the integrated concentration of CCN.
+    * Low CCN concentration --> low concentration of cloud droplets --> large maximum supersaturation.
+    * High CCN concentration --> High $N_D$ --> low $s_{max}$
+* Also: $d\omega_L/dt \propto s(t)$ --> the fewer drops in clean air grow faster.
+    * Clean air --> few large drops
+    * Polluted air --> Many small drops
+
+**Quasi-stationary supersaturation**
+Mature stage, rate of depletion of water vapor roughly equals rate of production (by continued uplift). Don't need to account for new activation, because past $s_{max}$, the droplet concentration is fixed.  
+LWC depends on the instantaneous droplet size distribution. Product and generation terms equal to each other gives -->
+$$s_{QS}=\frac{Aw}{\bar{r_d}N_d}
+$$
+
+
+
+
+
+## Warm Clouds
+![](https://hackmd.io/_uploads/By4Rm3NI2.png)
+
+#### Broadening of the cloud drop size spectrum
+Often before collisions can occur we need a broadening of the cloud droplet spectrum. This is especially for continetal clouds where the CCN concentrations are high resulting in many small droplets. Processes that can cause broading on the drop sepctrum are entraiment by turbulence. Another factor is the presence of giant CCN, which allow some drops to grow to the size for when collision-coalescence start to take effect. Another part is the lucky drop.    
+
+#### Development of warm rain 
+* **Continuous collection**:Assumes that there already exist a few large collector drops created by some of the processes above. The collection kernel of the collector drop is the effective volume swept by the falling drop, which depend on the collector drop size. When the size of the collector drop is much larger than the collected drop r~l~ >> r~s~ Then the collection efficiency is constant. A drop growing be continuous collection increase in size exponentially with time.
+    * Continuous collection: $dr_d/dt \sim exp(t)$
+    * Growth by condensation: $dr_d/dt \sim t^{1/2}$
+* **Stochastic collection**: Takes into account probability for every combination of drops to coalesce. The occurance of a collection event is discreate and each collection event increase the mass of the drop incrementaly. Only a few lucky droplets are need to initiate rain. Stochastic collection shift the drop spectrum from small to larger sizes.  
+
+The size of the rain drops are limited by breakup processes e.g. when a the collector drop and a smaller drop coalesce the energy is transfered from the collected drop to the collector drop causing circulations to occur inside of the collector drop and thus the collector drop will eventually break up. 
+
+
+## Cold clouds
+Are clouds that contain ice. Ice particles are common forms of precipitation in the anvil of deep convective clouds and stratiform clouds. We categorize the origin of ice as either primary (e.g. formed by nucleation) or secondary ice particles (formed by fragmentation and splitnering). Very few IN in the atmopshere concentration around 1 #/L. The range of primary ice formation start around -10 ^o^C. 
+
+![](https://hackmd.io/_uploads/r1biJRVLn.png)
+
+
+#### Seeder feeder effect
+Ice cloud above a stratiform cloud starts precipitating. When the ice particle reach the stratiform cloud they start to grow, by the WBF process. The seeding might be intermittent in nature and thus precipitation generated through by a seeder cloud would be "showery".   
 
 ---
 #### From the book
